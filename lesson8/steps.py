@@ -7,3 +7,10 @@ class TrafficLights(StatesGroup):
   StateYellow = State()
   StateGreen = State()
   StateOff = State()
+  
+  
+  
+class Flow(StatesGroup):
+  RegisterState = State()
+  Step_1 = State()
+  
