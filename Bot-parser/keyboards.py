@@ -5,7 +5,6 @@ news = ReplyKeyboardMarkup(
         [KeyboardButton(text='Політичні новини')],
         [KeyboardButton(text='Економічні новини')]
     ],
-    resize_keyboard=True,
     one_time_keyboard=True
 )
 
