@@ -1,5 +1,6 @@
 import asyncpg
 import asyncio
+from aiogram.dispatcher.filters.state import StatesGroup, State
 
 class Database():
   def __init__(self):
@@ -16,10 +17,24 @@ class Database():
     
     
     
-  async def register_student(self, name, age, email):
+  async def register_student(self, username, password, email):
     sql = f"""
-      INSERT INTO students (name, age, email) VALUES ('{name}', '{age}', '{email}')
+      INSERT INTO users (username, password, email) VALUES ('{username}', '{password}', '{email}')
     """
     print(sql)
     await self.pool.execute(sql)
     
+    
+    
+class Login(StatesGroup):
+   set_username = State()
+   set_password = State()
+   
+   
+   
+class Registration(StatesGroup):
+   set_name = State()
+   set_age = State()
+   set_email = State()
+   
+   

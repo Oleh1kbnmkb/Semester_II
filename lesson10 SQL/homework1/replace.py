@@ -1,6 +1,6 @@
 import psycopg2
 
-def replace(email: str, new_age: int):
+def replace(email: str, new_age: str):
     try:
         connection = psycopg2.connect(
             host='ep-empty-sea-524845.eu-central-1.aws.neon.tech',
@@ -22,9 +22,9 @@ def replace(email: str, new_age: int):
             update_query = 'UPDATE students SET age = %s WHERE id = %s'
             cursor.execute(update_query, (new_age, user_id))
             connection.commit()
-            print('Знайдено користувача та змінено вік.')
+            print('Знайдено користувача та змінено вік')
         else:
-            print('Незнайдено такого користувача.')
+            print('Такого користувача незнайдено.')
 
         cursor.close()
         connection.close()

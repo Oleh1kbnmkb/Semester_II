@@ -2,9 +2,8 @@ import logging
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher import FSMContext as FSM
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from steps import Registration
+from steps import *
 from database import Database
-from database import *
 
 import os
 from dotenv import load_dotenv
@@ -17,6 +16,7 @@ logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot, storage=MemoryStorage())
+db = Database()
 
 
 @dp.message_handler(commands=['start'])
@@ -47,11 +47,10 @@ async def set_email(message: types.Message, state: FSM):
         name = data['name']
         age = data['age']
         email = message.text
-    await Database.register_student(name, age, email)
+    await db.register_student(name, age, email)
     await message.answer('You have been successfully registered.')
     await state.finish()
 
 
 if __name__ == "__main__":
-    from aiogram import executor
     executor.start_polling(dp, skip_updates=True)
