@@ -84,6 +84,3 @@ print(r.calc_perimeter())
 
 c = Circle(4)
 print(c.calc_perimeter())
-
-
-        
