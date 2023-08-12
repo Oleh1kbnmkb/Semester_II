@@ -1,19 +1,3 @@
-import sqlite3
-
-
-def create_table(name, password):
-  connection = sqlite3.connect('currency.db')
-  cursor = connection.cursor()
-  cursor.execute("""CREATE TABLE IF NOT EXISTS {name} (
-      id INTEGER PRIMARY KEY,
-      name VARCHAR NOT NULL,
-      symbol VARCHAR NOT NULL,
-      price FLOAT NOT NULL
-  )""")
-  connection.commit()
-  connection.close()
-
-
 # import sqlite3
 # import requests
 # from bs4 import BeautifulSoup as bs
@@ -39,6 +23,10 @@ def create_table(name, password):
 #     data = cursor.fetchall()
 #     connection.close()
 #     return data
+
+
+
+
 # URL_TEMPLATE = "https://privatbank.ua/ru/rates-archive"
 # r = requests.get(URL_TEMPLATE)
 
