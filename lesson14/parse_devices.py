@@ -44,7 +44,7 @@ def database(item):
     try:
         connection = psycopg2.connect(
             host='ep-empty-sea-524845.eu-central-1.aws.neon.tech',
-            port='5432',
+            port='5432', 
             database='neondb',
             user='op663246',
             password='5ELlvIaWx3JK'
