@@ -1,70 +1,85 @@
-# my_file = open('C:\Python_1y_15_22\semester II\my_name.txt', 'w')
-# my_file.write('My name is Oleh')
-# my_file.close()
-
-# my_file = open('C:\Python_1y_15_22\semester II\my_name.txt', 'w')
-# my_file.write('\nI am 14 years old')
-# my_file.close()
-
-
-# my_file = open('semester II\my_name.txt', 'r')
-# info = my_file.read(10)
-# print(info)
-# my_file.close()
-
-
-# my_file = open('semester II\my_name.txt', 'r')
-# print(my_file.readlines()[::-1])
-# inf = my_file.readlines()
-# r = reversed(inf)
-# print(r)
-# my_file.close()
-
-# my_file = open('semester II\my_name.txt', 'w')
-# my_file.write('\nI live in Lviv')
-# my_file.close()
-
-# my_file = open('semester II\my_name.txt', 'a')
-# my_file.write('\nI am from in Ukraine')
-# my_file.close()
-
-# my_file = open('semester II\my_name.txt', 'r')
-# info = my_file.read()
+# string = "gsnmkks  ssssllll  ssss"
+# nums = '1235456452'
+# split = string.split('s')
+# strp = string.strip()
+# print(strp)
+# up = string.upper()
+# low = string.lower()
+# print(up, low)
+# isup = string.isupper()
+# islow = string.islower()
+# tit = string.title()
+# print(tit)
+# cap = string.capitalize()
+# print(cap)
+# rep = string.replace('s', 'l')
+# print(rep)
+# isnum = nums.isnumeric()
+# isdiq = nums.isdigit()
+# find = string.find('k')
+# print(isnum, isdiq, find)
+# words = ['let', 'me', 'cook']
+# j = string.join(words)
+# print(j)
 
 
 
-# file = open('C:\Python_1y_15_22\lessons\semester II\lesson1\grades.csv', 'r')
-# print(file.read())
-# file.close()
+# 2
+# n = int(input(': '))
+# n = str(n)
+# print(len(n))
 
 
-# file = open('C:\Python_1y_15_22\lessons\semester II\lesson1\grades.csv', 'a')
-# file.write('\n№5, 6, 8, 7')
-# file.close()
 
-# file = open('C:\Python_1y_15_22\lessons\semester II\lesson1\grades.csv', 'r')
-# result = []
-# for line in file:
-#     arr = line.split(',')
-#     result.append(arr)
-#     print(arr)
+# 909
+# text = input().split()
+# print(len(text))
 
-# print(int(result[4][2]))
-# file.close()
 
-file = open('C:\Python_1y_15_22\lessons\semester II\lesson1\grades.csv', 'r')
-result = []
-for line in file:
-    score = line.split(',')
-    result.append(score)
 
-sum_of_grades = sum(map(int, result[6][1:]))
-print(sum_of_grades)
-# sixth_student = result[6]
-# list_of_grades = sixth_student[1:]
-# b = [int(i) for i in list_of_grades]
-# print(list_of_grades)
-# print(b)
-# print(sum(b))
 
-file.close()
+# 8989
+# text = input()
+# res = ''
+# for i in range(len(text)):
+#   if text[i] == 'a':
+#     res += 'aa'
+#   else:
+#     res += text[i]
+    
+# print(res)
+
+
+
+
+# 8977
+# s = input()
+# p1 = s[2] + s[6] + s[10]
+# print(p1)
+# p2 = s[0] + s[-2] + s[-1] 
+# print(p2)
+# p3 = s[:7]
+# print(p3)
+# p4 = s[4:]
+# print(p4)
+# p5 = s[1::2]
+# print(p5)
+# p6 = len(p5)
+# print(p6)
+# p7 = s[::-1]
+# print(p7)
+
+
+
+# 119
+s = '248163264128'
+c = 0
+st = 1
+for i in range(len(s)):
+  f = s.find(str(2**st))
+  if f != -1:
+    c += 1
+    st += 1
+  else:
+    break
+print(c)
